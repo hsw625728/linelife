@@ -1,0 +1,32 @@
+/****************************************************************************/
+/* Localization file */
+
+"launch.copyright" = "© 2017 mengyoutu.cn";
+"launch.quick-play" = "开始";
+"launch.patterns" = "模板";
+"launch.favourites" = "喜欢";
+"launch.saved-games" = "存档";
+"launch.about" = "关于";
+"edit.edit" = "编辑";
+"common.cancel" = "取消";
+"game-settings.colour" = "颜色";
+"game-settings.size" = "尺寸";
+"game-settings.speed" = "速度";
+"game-settings.settings" = "设置";
+"patterns.search" = "搜索";
+"patterns.no-results" = "0 结果。";
+"patterns.no-preview" = "无预览";
+"patterns.patterns" = "模板";
+"quick-play-menu.save" = "保存";
+"quick-play-menu.restart" = "重置";
+"quick-play-menu.settings" = "设置";
+"quick-play-menu.quit" = "退出";
+"quick-play-menu.to-main-menu" = "到主菜单";
+"quick-play-menu.menu" = "菜单";
+"saved-games.search" = "搜索";
+"saved-games.no-results" = "0 结果。";
+"saved-games.saved-games" = "存档";
+"save-game.cancel" = "取消";
+"save-game.save" = "保存";
+"game.quick-play" = "开始";
+"about.about" = "关于";
