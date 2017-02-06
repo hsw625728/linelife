@@ -46,10 +46,10 @@ static CGFloat const kFWCellSpacing = 1.0f;
 {
     [self.collectionView registerClass:[FWPatternCollectionViewCell class] forCellWithReuseIdentifier:kFWPatternTileReuseIdentifier];
 
-    self.searchBar.placeholder = NSLocalizedString(@"patterns.search", @"Search");
+    self.searchBar.placeholder = NSLocalizedString(@"patterns.search", @"搜索");
     self.searchBar.rightImage = [UIImage imageNamed:@"magnifier"];
 
-    self.noResultLabel.text = NSLocalizedString(@"patterns.no-results", @"0 results.");
+    self.noResultLabel.text = NSLocalizedString(@"patterns.no-results", @"0 结果。");
     self.noResultLabel.font = [UIFont largeCondensedRegular];
     self.noResultLabel.textColor = [UIColor darkGrey];
     self.noResultContainer.hidden = YES;
@@ -95,7 +95,7 @@ static CGFloat const kFWCellSpacing = 1.0f;
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"patterns.patterns", @"Patterns");
+    return NSLocalizedString(@"patterns.patterns", @"模板");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

@@ -129,7 +129,7 @@ static CGFloat const kFWGameViewControllerBoardPadding = 15.0f;
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"game.quick-play", @"Quick Play");
+    return NSLocalizedString(@"game.quick-play", @"开始");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

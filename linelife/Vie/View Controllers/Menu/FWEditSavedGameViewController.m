@@ -24,7 +24,7 @@
     self.textField.text = self.savedGame.name;
 
     NSAttributedString *titleText = [[NSAttributedString alloc]
-            initWithString:[NSLocalizedString(@"common.cancel", @"cancel") uppercaseString]
+            initWithString:[NSLocalizedString(@"common.cancel", @"取消") uppercaseString]
                 attributes:@{NSForegroundColorAttributeName: [UIColor darkGrey], NSFontAttributeName: [UIFont smallUppercase]}
     ];
     [self.cancelButton setAttributedTitle:titleText forState:UIControlStateNormal];
@@ -41,7 +41,7 @@
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"edit.edit", @"Edit");
+    return NSLocalizedString(@"edit.edit", @"编辑");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

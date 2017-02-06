@@ -49,10 +49,10 @@ static CGFloat const kFWSettingsCellSpacing = 1.0f;
 {
     [super viewDidLoad];
 
-    self.saveTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"save"] title:NSLocalizedString(@"quick-play-menu.save", @"save") subTitle:nil];
-    self.createGameTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"restart"] title:NSLocalizedString(@"quick-play-menu.restart", @"restart") subTitle:nil];
-    self.settingsTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"settings"] title:NSLocalizedString(@"quick-play-menu.settings", @"settings") subTitle:nil];
-    self.quitTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"quit"] title:NSLocalizedString(@"quick-play-menu.quit", @"quit") subTitle:NSLocalizedString(@"quick-play-menu.to-main-menu", @"to main menu")];
+    self.saveTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"save"] title:NSLocalizedString(@"quick-play-menu.save", @"保存") subTitle:nil];
+    self.createGameTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"restart"] title:NSLocalizedString(@"quick-play-menu.restart", @"重置") subTitle:nil];
+    self.settingsTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"settings"] title:NSLocalizedString(@"quick-play-menu.settings", @"设置") subTitle:nil];
+    self.quitTile = [FWMenuTile tileWithMainColor:[UIColor lightGrey] image:[UIImage imageNamed:@"quit"] title:NSLocalizedString(@"quick-play-menu.quit", @"退出") subTitle:NSLocalizedString(@"quick-play-menu.to-main-menu", @"到主菜单")];
 
     self.saveTile.delegate = self;
     self.createGameTile.delegate = self;
@@ -142,7 +142,7 @@ static CGFloat const kFWSettingsCellSpacing = 1.0f;
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"quick-play-menu.menu", @"Menu");
+    return NSLocalizedString(@"quick-play-menu.menu", @"菜单");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

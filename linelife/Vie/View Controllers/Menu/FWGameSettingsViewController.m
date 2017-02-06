@@ -65,11 +65,11 @@ static CGFloat const kFWVerticalSpacing = 36.0f;
 {
     [super viewDidLoad];
 
-    self.colorLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.colour", @"colour")];
+    self.colorLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.colour", @"颜色")];
     [self placeColorTiles];
-    self.sizeLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.size", @"size")];
+    self.sizeLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.size", @"尺寸")];
     [self placeSizeTiles];
-    self.speedLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.speed", @"speed")];
+    self.speedLabel = [self placeLabelWithString:NSLocalizedString(@"game-settings.speed", @"速度")];
     [self placeSpeedTiles];
 }
 
@@ -97,7 +97,7 @@ static CGFloat const kFWVerticalSpacing = 36.0f;
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"game-settings.settings", @"Settings");
+    return NSLocalizedString(@"game-settings.settings", @"设置");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

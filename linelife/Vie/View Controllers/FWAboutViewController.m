@@ -17,7 +17,7 @@
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"about.about", @"About");
+    return NSLocalizedString(@"about.about", @"关于");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar

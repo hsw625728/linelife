@@ -66,7 +66,7 @@ static CGFloat const kFWCellPatternFavouriteButtonPadding = 9.0f;
         [_nonSelectedContainer addSubview:_sizeLabel];
 
         _noPreviewLabel = [[UILabel alloc] init];
-        _noPreviewLabel.text = NSLocalizedString(@"patterns.no-preview", @"no preview");
+        _noPreviewLabel.text = NSLocalizedString(@"patterns.no-preview", @"无预览");
         _noPreviewLabel.textColor = [UIColor mediumGrey];
         _noPreviewLabel.font = [UIFont smallCondensed];
         _noPreviewLabel.hidden = YES;

@@ -49,10 +49,10 @@ static CGFloat const kFWCellSpacing = 1.0f;
 {
     [self.collectionView registerClass:[FWSavedGameCollectionViewCell class] forCellWithReuseIdentifier:kFWSavedGameTileReuseIdentifier];
 
-    self.searchBar.placeholder = NSLocalizedString(@"saved-games.search", @"Search");
+    self.searchBar.placeholder = NSLocalizedString(@"saved-games.search", @"搜索");
     self.searchBar.rightImage = [UIImage imageNamed:@"magnifier"];
 
-    self.noResultLabel.text = NSLocalizedString(@"saved-games.no-results", @"0 results.");
+    self.noResultLabel.text = NSLocalizedString(@"saved-games.no-results", @"0 结果。");
     self.noResultLabel.font = [UIFont largeCondensedRegular];
     self.noResultLabel.textColor = [UIColor darkGrey];
     self.noResultContainer.hidden = YES;
@@ -91,7 +91,7 @@ static CGFloat const kFWCellSpacing = 1.0f;
 
 - (NSString *)titleFor:(FWTitleBar *)titleBar
 {
-    return NSLocalizedString(@"saved-games.saved-games", @"Saved Games");
+    return NSLocalizedString(@"saved-games.saved-games", @"存档");
 }
 
 - (void)buttonTappedFor:(FWTitleBar *)titleBar
