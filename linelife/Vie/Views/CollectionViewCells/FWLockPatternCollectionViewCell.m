@@ -82,8 +82,8 @@ static CGFloat const kFWCellPatternFavouriteButtonPadding = 9.0f;
         
         //添加锁定图标
         _lockButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_lockButton setImage:[UIImage imageNamed:@"large-play"] forState:UIControlStateNormal];
-        [_lockButton setImage:[UIImage imageNamed:@"large-play-active"] forState:UIControlStateHighlighted];
+        [_lockButton setImage:[UIImage imageNamed:@"large-lock"] forState:UIControlStateNormal];
+        [_lockButton setImage:[UIImage imageNamed:@"large-lock-active"] forState:UIControlStateHighlighted];
         [_lockButton addTarget:self action:@selector(lockButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [_nonSelectedContainer addSubview:_lockButton];
 

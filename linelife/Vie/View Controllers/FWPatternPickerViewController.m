@@ -70,6 +70,11 @@ static CGFloat const kFWCellSpacing = 1.0f;
     [self.collectionView reloadData];
 }
 
+- (void)viewWillAppear
+{
+    [self.collectionView reloadData];
+}
+
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
@@ -142,15 +147,16 @@ static CGFloat const kFWCellSpacing = 1.0f;
     NSString *docPath =  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *path = [docPath stringByAppendingPathComponent:@"buyHistory"];
     buyHistory = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    if (ISNULL(buyHistory))
+        buyHistory = [[NSMutableDictionary alloc] init];
     
-    
-    if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+    if (![((NSString*)[buyHistory objectForKey:LINE_LIFE_ITEM4]) isEqualToString:@"null"]){
         rank = 4;
-    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+    }else if (![((NSString*)[buyHistory objectForKey:LINE_LIFE_ITEM3]) isEqualToString:@"null"]){
         rank = 3;
-    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+    }else if (![((NSString*)[buyHistory objectForKey:LINE_LIFE_ITEM2]) isEqualToString:@"null"]){
         rank = 2;
-    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+    }else if (![((NSString*)[buyHistory objectForKey:LINE_LIFE_ITEM1]) isEqualToString:@"null"]){
         rank = 1;
     }else{
         rank = 0;

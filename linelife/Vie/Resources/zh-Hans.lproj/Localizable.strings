@@ -30,8 +30,12 @@
 "save-game.save" = "保存";
 "game.quick-play" = "开始";
 "about.about" = "关于";
-"unlock.item1" = "6元 解锁30个模板";
-"unlock.item2" = "12元 解锁90+30(额外赠送)个模板";
-"unlock.item3" = "24元 解锁240+120(额外赠送)个模板";
-"unlock.item4" = "48元 解锁500+360(额外赠送)个模板";
-
+"unlock.item1" = "6元解锁30个模板";
+"unlock.item2" = "12元解锁90+30(额外赠送)个模板";
+"unlock.item3" = "25元解锁240+120(额外赠送)个模板";
+"unlock.item4" = "45元解锁500+360(额外赠送)个模板";
+"unlock.item1re" = "6元包已经购买（点击恢复购买）";
+"unlock.item2re" = "12元包已经购买（点击恢复购买）";
+"unlock.item3re" = "25元包已经购买（点击恢复购买）";
+"unlock.item4re" = "45元包已经购买（点击恢复购买）";
+"unlock.return" = "返回模板列表";

@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FWUnlockViewController">
             <connections>
                 <outlet property="backgroundImageView" destination="pDy-lZ-agE" id="uAi-zL-v56"/>
-                <outlet property="logoImageView" destination="tCr-eY-lZT" id="zrZ-Um-Jbf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DHM-TZ-BkE"/>
             </connections>
         </placeholder>
@@ -25,10 +24,6 @@
                     <rect key="frame" x="-7" y="0.0" width="414" height="736"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="tCr-eY-lZT">
-                    <rect key="frame" x="88" y="123" width="224" height="155"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -38,7 +33,6 @@
     </objects>
     <resources>
         <image name="background" width="414" height="736"/>
-        <image name="logo" width="224" height="155"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

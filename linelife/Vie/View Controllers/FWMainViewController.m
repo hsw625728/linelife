@@ -89,15 +89,16 @@ static CGFloat const kFWGameViewControllerCellBorderWidth = 1.0f;
     NSString *path = [docPath stringByAppendingPathComponent:@"buyHistory"];
     buyHistory = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     
-    if (ISNULL(buyHistory))
+    if (ISNULL(buyHistory)){
+        
         buyHistory = [[NSMutableDictionary alloc] init];
     
-    [buyHistory setObject:@"null" forKey:@"LifelineItem1"];
-    [buyHistory setObject:@"null" forKey:@"LifelineItem2"];
-    [buyHistory setObject:@"null" forKey:@"LifelineItem3"];
-    [buyHistory setObject:@"null" forKey:@"LifelineItem4"];
-    
-    [NSKeyedArchiver archiveRootObject:buyHistory toFile:path];
+        [buyHistory setObject:@"null" forKey:LINE_LIFE_ITEM1];
+        [buyHistory setObject:@"null" forKey:LINE_LIFE_ITEM2];
+        [buyHistory setObject:@"null" forKey:LINE_LIFE_ITEM3];
+        [buyHistory setObject:@"null" forKey:LINE_LIFE_ITEM4];
+        [NSKeyedArchiver archiveRootObject:buyHistory toFile:path];
+    }
     //购买记录文件创建完毕
 }
 

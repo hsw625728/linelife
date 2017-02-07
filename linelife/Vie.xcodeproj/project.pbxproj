@@ -774,7 +774,7 @@
 					"\"${PROJECT_DIR}/Libs\"/**",
 					"$(PROJECT_DIR)/Libs/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.lifeline;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.linelife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -801,7 +801,7 @@
 					"\"${PROJECT_DIR}/Libs\"/**",
 					"$(PROJECT_DIR)/Libs/Flurry",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.lifeline;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mengyoutu.linelife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
