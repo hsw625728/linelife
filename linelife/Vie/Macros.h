@@ -8,5 +8,6 @@
 
 #define FWRoundFloat(x) floorf([UIScreen mainScreen].scale * x) / [UIScreen mainScreen].scale
 #define FWDegreesToRadians(x) x * M_PI / 180.0f
+#define ISNULL(x) (x?((id)x==(id)[NSNull null]):true)
 
 #endif

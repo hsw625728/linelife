@@ -23,6 +23,9 @@
 		468562E11AF1CA7C00DC6B7C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468562E01AF1CA7C00DC6B7C /* Security.framework */; };
 		469E76861ABFA22400319877 /* FWLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469E76851ABFA22400319877 /* FWLaunchScreen.xib */; };
 		46DFD8F91ABFD39000AD8E43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46DFD8FB1ABFD39000AD8E43 /* Localizable.strings */; };
+		5893BB9A1E495E07004B8631 /* FWLockPatternCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5893BB991E495E07004B8631 /* FWLockPatternCollectionViewCell.m */; };
+		5893BB9E1E4964F9004B8631 /* FWUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5893BB9C1E4964F9004B8631 /* FWUnlockViewController.m */; };
+		5893BB9F1E4964F9004B8631 /* FWUnlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5893BB9D1E4964F9004B8631 /* FWUnlockViewController.xib */; };
 		5F29805519B29BB3006C4C91 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F29805319B29BB3006C4C91 /* DataModel.xcdatamodeld */; };
 		5F29805819B29ED8006C4C91 /* FWSavedGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29805719B29ED8006C4C91 /* FWSavedGameModel.m */; };
 		5F3EF7C71CDA87F500B6DEA6 /* libFlurry_7.6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3EF7C61CDA87F500B6DEA6 /* libFlurry_7.6.0.a */; };
@@ -102,6 +105,11 @@
 		469E76851ABFA22400319877 /* FWLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FWLaunchScreen.xib; sourceTree = "<group>"; };
 		5893BB961E486E05004B8631 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5893BB971E486E05004B8631 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "zh-Hans"; path = "zh-Hans.lproj/about.html"; sourceTree = "<group>"; };
+		5893BB981E495E07004B8631 /* FWLockPatternCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLockPatternCollectionViewCell.h; sourceTree = "<group>"; };
+		5893BB991E495E07004B8631 /* FWLockPatternCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWLockPatternCollectionViewCell.m; sourceTree = "<group>"; };
+		5893BB9B1E4964F9004B8631 /* FWUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWUnlockViewController.h; sourceTree = "<group>"; };
+		5893BB9C1E4964F9004B8631 /* FWUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWUnlockViewController.m; sourceTree = "<group>"; };
+		5893BB9D1E4964F9004B8631 /* FWUnlockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FWUnlockViewController.xib; sourceTree = "<group>"; };
 		5F29805419B29BB3006C4C91 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5F29805619B29ED8006C4C91 /* FWSavedGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWSavedGameModel.h; sourceTree = "<group>"; };
 		5F29805719B29ED8006C4C91 /* FWSavedGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWSavedGameModel.m; sourceTree = "<group>"; };
@@ -301,6 +309,9 @@
 				A6BD8E598D196F2CEE8BA33A /* FWLaunchScreenViewController.m */,
 				A6BD82E53DCEB279ACD04AFE /* FWLaunchScreenViewController.h */,
 				A6BD8D54F5A43C9B1B468EB5 /* FWLaunchScreenViewController.xib */,
+				5893BB9B1E4964F9004B8631 /* FWUnlockViewController.h */,
+				5893BB9C1E4964F9004B8631 /* FWUnlockViewController.m */,
+				5893BB9D1E4964F9004B8631 /* FWUnlockViewController.xib */,
 				A6BD8C834C55A943F824AAB0 /* FWAboutViewController.m */,
 				A6BD896B6A12EB20D44C98DD /* FWAboutViewController.h */,
 				A6BD83F1A46518921715C6A8 /* FWAboutViewController.xib */,
@@ -408,6 +419,8 @@
 		A6BD86389D7A9CE6F76ADF39 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				5893BB981E495E07004B8631 /* FWLockPatternCollectionViewCell.h */,
+				5893BB991E495E07004B8631 /* FWLockPatternCollectionViewCell.m */,
 				A6BD8A9FE5A6088AB496D9F1 /* FWPatternCollectionViewCell.m */,
 				A6BD82ACAF736222FAB313EC /* FWPatternCollectionViewCell.h */,
 				A6BD81D67574471A4DCE5B21 /* FWSavedGameCollectionViewCell.m */,
@@ -570,6 +583,7 @@
 				46330FAC18E2964100E5C7EC /* Images.xcassets in Resources */,
 				B3935FA6823798258F5203A1 /* patterns.dat in Resources */,
 				5FB4510F19B542EC0040F524 /* FWGameViewController.xib in Resources */,
+				5893BB9F1E4964F9004B8631 /* FWUnlockViewController.xib in Resources */,
 				B3935820369BEF29F55BEF35 /* FWGameSettingsViewController.xib in Resources */,
 				B39356087CF49AA8E207FB15 /* Avenir Next Condensed.ttc in Resources */,
 				46844F7D1AED8ADC00E73FB7 /* cycle-2@2x.png in Resources */,
@@ -608,6 +622,7 @@
 				A6BD85D9E6F095BA44C3EFC0 /* FWRandomNumberGenerator.m in Sources */,
 				A6BD8D4E382AD099F9168486 /* FWSettingsManager.m in Sources */,
 				A6BD8DF13ABCF912598D6E74 /* FWUserModel.m in Sources */,
+				5893BB9A1E495E07004B8631 /* FWLockPatternCollectionViewCell.m in Sources */,
 				A6BD8715FACA0877A503A265 /* UIColor+FWAppColors.m in Sources */,
 				A6BD8FCD8CA8F9F4DB687236 /* FWPatternModel.m in Sources */,
 				5F29805519B29BB3006C4C91 /* DataModel.xcdatamodeld in Sources */,
@@ -622,6 +637,7 @@
 				B3935CBEDD0FBE03D628425C /* FWGameSpeed.m in Sources */,
 				B3935E634DE9C7C44E3480CA /* FWSpeedTile.m in Sources */,
 				B39357CB2D7EC4DA036A2B8E /* FWTitleBar.m in Sources */,
+				5893BB9E1E4964F9004B8631 /* FWUnlockViewController.m in Sources */,
 				B39358E3E71568502E140B8B /* FWGameToolbar.m in Sources */,
 				B393539DD243836BB5958E25 /* FWMenuTile.m in Sources */,
 				A6BD8DEB16ED331141F4F586 /* FWPatternCollectionViewCell.m in Sources */,

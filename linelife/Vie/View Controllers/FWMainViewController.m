@@ -82,6 +82,23 @@ static CGFloat const kFWGameViewControllerCellBorderWidth = 1.0f;
     self.launchScreenViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.launchScreenViewController.view];
     [self.launchScreenViewController didMoveToParentViewController:self];
+    
+    //创建购买记录文件
+    NSMutableDictionary *buyHistory;
+    NSString *docPath =  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [docPath stringByAppendingPathComponent:@"buyHistory"];
+    buyHistory = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    
+    if (ISNULL(buyHistory))
+        buyHistory = [[NSMutableDictionary alloc] init];
+    
+    [buyHistory setObject:@"null" forKey:@"LifelineItem1"];
+    [buyHistory setObject:@"null" forKey:@"LifelineItem2"];
+    [buyHistory setObject:@"null" forKey:@"LifelineItem3"];
+    [buyHistory setObject:@"null" forKey:@"LifelineItem4"];
+    
+    [NSKeyedArchiver archiveRootObject:buyHistory toFile:path];
+    //购买记录文件创建完毕
 }
 
 - (void)viewWillLayoutSubviews

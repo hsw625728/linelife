@@ -7,6 +7,7 @@
 #import "FWColorSchemeModel.h"
 #import "FWBoardSizeModel.h"
 #import "FWPatternCollectionViewCell.h"
+#import "FWLockPatternCollectionViewCell.h"
 #import "FWPatternModel.h"
 #import "UIColor+FWAppColors.h"
 #import "FWTextField.h"
@@ -16,6 +17,7 @@
 #import "FWDataManager.h"
 
 static NSString * const kFWPatternTileReuseIdentifier = @"PatternTile";
+static NSString * const kFWLockPatternTileReuseIdentifier = @"LockPatternTile";
 static CGFloat const kFWCollectionViewSideMargin = 26.0f;
 static CGFloat const kFWSearchBarContainerTopMargin = 58.0f;
 static CGFloat const kFWCellSpacing = 1.0f;
@@ -45,6 +47,7 @@ static CGFloat const kFWCellSpacing = 1.0f;
 - (void)viewDidLoad
 {
     [self.collectionView registerClass:[FWPatternCollectionViewCell class] forCellWithReuseIdentifier:kFWPatternTileReuseIdentifier];
+    [self.collectionView registerClass:[FWLockPatternCollectionViewCell class] forCellWithReuseIdentifier:kFWLockPatternTileReuseIdentifier];
 
     self.searchBar.placeholder = NSLocalizedString(@"patterns.search", @"搜索");
     self.searchBar.rightImage = [UIImage imageNamed:@"magnifier"];
@@ -133,17 +136,91 @@ static CGFloat const kFWCellSpacing = 1.0f;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FWPatternCollectionViewCell *dequeuedCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kFWPatternTileReuseIdentifier forIndexPath:indexPath];
-    dequeuedCell.delegate = self;
+    //根据购买状态来决定是否激活当前模板
+    NSInteger rank = 0;
+    NSMutableDictionary *buyHistory;
+    NSString *docPath =  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [docPath stringByAppendingPathComponent:@"buyHistory"];
+    buyHistory = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    
+    
+    if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+        rank = 4;
+    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+        rank = 3;
+    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+        rank = 2;
+    }else if (![((NSString*)[buyHistory objectForKey:@"LifelineItem4"]) isEqualToString:@"null"]){
+        rank = 1;
+    }else{
+        rank = 0;
+    }
 
-    FWPatternModel *model = self.patterns[(NSUInteger) indexPath.row];
-
-    dequeuedCell.mainColor = [UIColor lightGrey];
-    dequeuedCell.cellPattern = model;
-    dequeuedCell.colorScheme = self.colorScheme;
-    dequeuedCell.fitsOnCurrentBoard = [model.boardSize isSmallerOrEqualToBoardSize:self.boardSize];
-
-    return dequeuedCell;
+    BOOL active = NO;
+    
+    switch(rank){
+        case 0:
+        {
+            if (indexPath.row < 13)
+                active = YES;
+        }
+            break;
+        case 1:
+        {
+            if (indexPath.row < 43)
+                active = YES;
+        }
+            break;
+        case 2:
+        {
+            if (indexPath.row < 133)
+                active = YES;
+        }
+            break;
+        case 3:
+        {
+            if (indexPath.row < 373)
+                active = YES;
+        }
+            break;
+        case 4:
+        {
+            if (indexPath.row < 873)
+                active = YES;
+        }
+            break;
+        default:
+        {
+            if (indexPath.row < 873)
+                active = YES;
+        }
+            break;
+    }
+    if (active){
+        FWPatternCollectionViewCell *dequeuedCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kFWPatternTileReuseIdentifier forIndexPath:indexPath];
+        dequeuedCell.delegate = self;
+        
+        FWPatternModel *model = self.patterns[(NSUInteger) indexPath.row];
+        
+        dequeuedCell.mainColor = [UIColor lightGrey];
+        dequeuedCell.cellPattern = model;
+        dequeuedCell.colorScheme = self.colorScheme;
+        dequeuedCell.fitsOnCurrentBoard = [model.boardSize isSmallerOrEqualToBoardSize:self.boardSize];
+        
+        return dequeuedCell;
+    }else{
+        FWLockPatternCollectionViewCell *dequeuedCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kFWLockPatternTileReuseIdentifier forIndexPath:indexPath];
+        dequeuedCell.delegate = self;
+        
+        FWPatternModel *model = self.patterns[(NSUInteger) indexPath.row];
+        
+        dequeuedCell.mainColor = [UIColor lightGrey];
+        dequeuedCell.cellPattern = model;
+        dequeuedCell.colorScheme = self.colorScheme;
+        dequeuedCell.fitsOnCurrentBoard = [model.boardSize isSmallerOrEqualToBoardSize:self.boardSize];
+        
+        return dequeuedCell;
+    }
 }
 
 #pragma mark - UICollectionViewDelegate

@@ -30,3 +30,8 @@
 "save-game.save" = "保存";
 "game.quick-play" = "开始";
 "about.about" = "关于";
+"unlock.item1" = "6元 解锁30个模板";
+"unlock.item2" = "12元 解锁90+30(额外赠送)个模板";
+"unlock.item3" = "24元 解锁240+120(额外赠送)个模板";
+"unlock.item4" = "48元 解锁500+360(额外赠送)个模板";
+
